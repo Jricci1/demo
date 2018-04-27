@@ -1,0 +1,53 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+</ion-content>
+ -->
+
+ <ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+    Tap the "Login with" button to login using the Facebook native app. If the app can't be found
+    (maybe because it isn't installed), a prompt will appear (to install it). When logged in, tap "Logout from" to log out from Facebook.
+ 
+ 
+<div *ngIf="isLoggedIn == true && user">
+ 
+ 
+ 
+<h2>Hi, {{user.name}} ({{user.email}})</h2>
+ 
+ 
+ 
+      Gender: {{user.gender}}
+ 
+      <img src="{{user.picture.data.url}}" width="100" alt="{{user.name}}" />
+ 
+      <button ion-button icon-right (click)="logoutFromFacebook()">
+        Logout from
+        <ion-icon name="logo-facebook"></ion-icon>
+      </button>
+  </div>
+ 
+ 
+ 
+    <button ion-button icon-right (click)="loginWithFacebook()">
+      Login with
+      <ion-icon name="logo-facebook"></ion-icon>
+    </button>
+ 
+</ion-content>
